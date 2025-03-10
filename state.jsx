@@ -16,3 +16,36 @@ const App = () => {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+// ------------ 
+
+import {useState} from "react";
+
+
+const App = () => {
+    const [friends, setFriends] = useState(['Alex', 'john']);
+    const addOneFriend = () => {
+        setFriends([...friends, 'kuddus']);
+    }
+    return <section>
+        {
+            friends.map((friend) => <li key={Math.random()}>{friend}</li>)
+        }
+        <button onClick={addOneFriend}>Add new friend</button>
+    </section>
+}
+
+export default App;
+
+
+
+
+
+
